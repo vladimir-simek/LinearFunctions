@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee8f8d03-b10f-41dc-868b-4b31d8e94c86" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/vladimirsimek/linearfunctions/Functions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinearFunction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LinearFunction.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/vladimirsimek/linearfunctions/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/vladimirsimek/linearfunctions/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/vladimirsimek/linearfunctions/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/vladimirsimek/linearfunctions/Logic.java" afterDir="false" />
     </list>
@@ -106,6 +104,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -122,7 +131,7 @@
       <updated>1615658137276</updated>
       <workItem from="1615658139238" duration="1379000" />
       <workItem from="1615659543547" duration="267000" />
-      <workItem from="1615713456442" duration="307000" />
+      <workItem from="1615713456442" duration="1264000" />
     </task>
     <servers />
   </component>
