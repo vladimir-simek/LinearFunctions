@@ -1,8 +1,6 @@
 package com.vladimirsimek.linearfunctions;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -11,7 +9,7 @@ public class Data {
     public static ArrayList<String[]> rawFunctions = new ArrayList<>();
     public static ArrayList<Functions> functionsArrayList = new ArrayList<>();
 
-    public static void loadToArrayList(){
+    public static void loadToArrayList() {
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader("data/functions.txt"));
             String readLine = bufferedReader.readLine();
@@ -55,7 +53,7 @@ public class Data {
                 StringBuilder parser = new StringBuilder();
 
                 for (int i = 0; i < validLinePrepare[2].length(); i++) {
-                    if (validLinePrepare[2].charAt(i) >= 48 && validLinePrepare[2].charAt(i) <= 57){
+                    if (validLinePrepare[2].charAt(i) >= 48 && validLinePrepare[2].charAt(i) <= 57) {
                         parser.append(validLinePrepare[2].charAt(i));
                     }
                 }
@@ -75,8 +73,22 @@ public class Data {
 
             // for test uncomment code above
 
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void countIt() {
+
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("data/count.txt"));
+
+            bufferedWriter.write(String.valueOf(functionsArrayList.size()));
+            bufferedWriter.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
