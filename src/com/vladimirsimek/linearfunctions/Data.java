@@ -2,7 +2,6 @@ package com.vladimirsimek.linearfunctions;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Data {
 
@@ -78,17 +77,55 @@ public class Data {
         }
     }
 
+    public static int allFunctions = 0;
+
     public static void countIt() {
 
         try {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("data/count.txt"));
 
-            bufferedWriter.write(String.valueOf(functionsArrayList.size()));
+            allFunctions = Integer.parseInt(String.valueOf(functionsArrayList.size()));
+            bufferedWriter.write(String.valueOf(allFunctions));
             bufferedWriter.close();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
+
+    public static int duplicateFunctions = 0;
+    public static int specialFunctions = 0;
+
+    public static void countSpecials() {
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("data/count_distinct.txt"));
+
+            for (int i = 0; i < functionsArrayList.size(); i++) {
+                int duplicity = 0;
+                int currentA = functionsArrayList.get(i).a;
+                int currentB = functionsArrayList.get(i).b;
+                for (int j = 0; j < functionsArrayList.size(); j++) {
+                    int otherA = functionsArrayList.get(j).a;
+                    int otherB = functionsArrayList.get(j).b;
+
+                    if (currentA == otherA && currentB == otherB) {
+                        duplicity++;
+                    }
+                }
+                if (duplicity >= 2) {
+                    duplicateFunctions++;
+                }
+            }
+
+            specialFunctions = allFunctions - duplicateFunctions;
+
+            bufferedWriter.write(String.valueOf(specialFunctions));
+            bufferedWriter.close();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
